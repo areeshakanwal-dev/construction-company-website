@@ -2419,3 +2419,510 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* ---------------------testimonial------------------------- */
+.lets-talk2 {
+    padding: 100px 0 100px 0; /* Remove bottom padding */
+    background: #0a0566;
+    position: relative;
+    overflow: visible; /* Change from hidden to visible */
+}
+
+/* ====== BACKGROUND TEXT "LET'S CHAT" ====== */
+
+
+.lets-talk-bg-text2 {
+    position: absolute;
+    top: 24%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: #0a0566; /* Blue text inside */
+    white-space: nowrap;
+    letter-spacing: 4px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    /* White border around text */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+.lets-talk-wrapper2 {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 57px;
+    position: relative;
+    z-index: 1;
+}
+
+.lets-talk-content2 {
+    max-width: 750px;
+    text-align: left;
+    margin-left: 4px;
+    
+}
+
+.lets-talk-title2 {
+    font-size: 4.4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 25px;
+    margin-top: 45px;
+    margin-left: 35px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+
+.lets-talk-text2 {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.9;
+    margin-bottom: 35px;
+    margin-left: 90px;
+    text-align: left;
+    letter-spacing: 0.01px;
+}
+
+
+/* ====== AUTHOR — COLUMN WITH VERTICAL LINE ONLY ON LEFT SIDE ====== */
+.testimonial-author {
+  display: flex;
+  flex-direction: column;        /* stack name & role vertically */
+  align-items: flex-start;      /* align text to the left */
+  justify-content: center;
+  gap: 0.05rem;
+  width: 100%;
+  padding: 0.5rem 0;
+  padding-left: 50px;           /* distance from the vertical line */
+  position: relative;
+}
+
+/* Vertical line only on the left side (like a wall) */
+.testimonial-author::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 85px;
+  width: 2px;                   /* thickness of the vertical line */
+  background: #fa6f19;          /* white vertical line */
+  opacity: 1;
+}
+
+.author-name,
+.author-role {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 50px;
+  color: #ffffff;               /* white text */
+  padding: 0.1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.author-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.author-role {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #ffffff;
+  opacity: 0.8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+/* ====== HOLLOW ORANGE INVERTED COMMA ====== */
+.orange-symbol {
+  color: transparent;
+  -webkit-text-stroke: 2.5px #FF5A00;
+  text-stroke: 2.5px #FF5A00;
+  font-size: 12rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 0;
+  margin-top: 170px;
+  margin-bottom: 0;
+  margin-right: 560px;
+  font-family: 'Franklin Gothic Heavy', 'Arial Black', sans-serif;
+  display: block;
+  font-weight: 900;
+  transform: rotate(180deg); 
+}
+/* Responsive */
+@media (max-width: 500px) {
+  .testimonial-author {
+    padding-left: 15px;
+  }
+  .author-name {
+    font-size: 1.2rem;
+  }
+  .author-role {
+    font-size: 0.85rem;
+  }
+}
+/* ====== RESPONSIVE ====== */
+
+/* Large Tablets & Small Laptops */
+@media screen and (max-width: 1200px) {
+    .orange-stats-box {
+        width: 95%;
+        height: auto;
+        min-height: 150px;
+        padding: 40px 0;
+        transform: translateY(-60%);
+    }
+    
+    .stats-wrapper {
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .stat-title {
+        font-size: 1.1rem;
+    }
+    
+    .stat-number {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+    .lets-talk {
+        padding: 80px 0 250px 0;
+    }
+    
+    .lets-talk-bg-text {
+        font-size: 5rem;
+        top: 18%;
+        left: 42%;
+    }
+    
+    .lets-talk-wrapper {
+        margin-left: 30px;
+    }
+    
+    .lets-talk-title {
+        font-size: 2.8rem;
+        margin-left: 30px;
+        margin-top: 40px;
+    }
+    
+    .lets-talk-text {
+        font-size: 0.95rem;
+        margin-left: 35px;
+    }
+    
+    .lets-talk-btn {
+        margin-left: 30px;
+        padding: 14px 25px;
+        font-size: 0.85rem;
+    }
+    
+    .orange-stats-box {
+        width: 95%;
+        height: auto;
+        min-height: 130px;
+        padding: 35px 0;
+        transform: translateY(-55%);
+        border-radius: 4px;
+    }
+    
+    .stats-wrapper {
+        gap: 25px;
+        padding: 0 15px;
+    }
+    
+    .stat-title {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .stat-number {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+    .lets-talk {
+        padding: 60px 0 200px 0;
+    }
+    
+    .lets-talk-bg-text {
+        font-size: 3.5rem;
+        top: 15%;
+        left: 40%;
+        letter-spacing: 2px;
+        -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2);
+        text-stroke: 0.5px rgba(255, 255, 255, 0.2);
+    }
+    
+    .lets-talk-wrapper {
+        margin-left: 20px;
+        justify-content: center;
+    }
+    
+    .lets-talk-content {
+        max-width: 100%;
+        padding: 0 15px;
+        margin-left: 0;
+    }
+    
+    .lets-talk-title {
+        font-size: 2.2rem;
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .lets-talk-text {
+        font-size: 0.9rem;
+        margin-left: 0;
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    .lets-talk-btn {
+        display: block;
+        margin: 0 auto;
+        padding: 14px 25px;
+        font-size: 0.85rem;
+        text-align: center;
+        max-width: 200px;
+    }
+    
+    .orange-stats-box {
+        width: 98%;
+        height: auto;
+        min-height: 120px;
+        padding: 30px 0;
+        transform: translateY(-45%);
+        border-radius: 4px;
+    }
+    
+    .stats-wrapper {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .stat-item {
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+    
+    .stat-title {
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+    }
+    
+    .stat-number {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Phones */
+@media screen and (max-width: 480px) {
+    .lets-talk {
+        padding: 40px 0 160px 0;
+    }
+    
+    .lets-talk-bg-text {
+        font-size: 2.5rem;
+        top: 12%;
+        left: 38%;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 0.3px rgba(255, 255, 255, 0.15);
+        text-stroke: 0.3px rgba(255, 255, 255, 0.15);
+    }
+    
+    .lets-talk-wrapper {
+        margin-left: 10px;
+    }
+    
+    .lets-talk-title {
+        font-size: 1.8rem;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+    }
+    
+    .lets-talk-text {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+    
+    .lets-talk-btn {
+        padding: 12px 20px;
+        font-size: 0.8rem;
+        max-width: 170px;
+    }
+    
+    .orange-stats-box {
+        width: 100%;
+        padding: 25px 0;
+        transform: translateY(-40%);
+        border-radius: 3px;
+        box-shadow: 0 10px 30px rgba(99, 99, 99, 0.15);
+    }
+    
+    .stats-wrapper {
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .stat-item {
+        padding: 5px 0;
+    }
+    
+    .stat-title {
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    .stat-number {
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape Phones */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .lets-talk {
+        padding: 40px 0 150px 0;
+        min-height: 120vh;
+    }
+    
+    .lets-talk-bg-text {
+        font-size: 3rem;
+        top: 20%;
+        left: 40%;
+    }
+    
+    .lets-talk-title {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    
+    .lets-talk-text {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+    
+    .orange-stats-box {
+        padding: 25px 0;
+        transform: translateY(-35%);
+        min-height: 100px;
+    }
+    
+    .stats-wrapper {
+        flex-direction: row;
+        gap: 15px;
+    }
+    
+    .stat-item {
+        border-bottom: none;
+        padding: 5px 0;
+    }
+    
+    .stat-title {
+        font-size: 0.8rem;
+    }
+    
+    .stat-number {
+        font-size: 0.75rem;
+    }
+}
+
+/* Very Large Screens */
+@media screen and (min-width: 1400px) {
+    .lets-talk {
+        padding: 150px 0 350px 0;
+    }
+    
+    .lets-talk-bg-text {
+        font-size: 10rem;
+        top: 28%;
+        left: 48%;
+    }
+    
+    .lets-talk-title {
+        font-size: 4.5rem;
+        margin-left: 70px;
+    }
+    
+    .lets-talk-text {
+        font-size: 1.1rem;
+        margin-left: 75px;
+        max-width: 800px;
+    }
+    
+    .lets-talk-btn {
+        margin-left: 65px;
+        padding: 18px 35px;
+        font-size: 1rem;
+    }
+    
+    .orange-stats-box {
+        width: 1200px;
+        max-width: 85%;
+        padding: 60px 0;
+        transform: translateY(-75%);
+        min-height: 220px;
+    }
+    
+    .stat-title {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+    }
+    
+    .stat-number {
+        font-size: 1.3rem;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .lets-talk-bg-text {
+        -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2);
+        text-stroke: 0.5px rgba(255, 255, 255, 0.2);
+    }
+}
+/* ====== TEAM SECTION ====== */
+/* ====== TEAM SECTION ====== */
+.team-section {
+    padding: 100px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ====== TEAM HEADING ====== */
+.team-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #121213;
+    text-align: left;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
