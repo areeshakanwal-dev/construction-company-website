@@ -47,3 +47,31 @@ document.addEventListener('DOMContentLoaded', function() {
     slideInterval = setInterval(nextSlide, 4000);
   });
 });
+
+// _______________next__________________
+// ====== PROJECTS FILTER ======
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                if (filterValue === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    if (card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
