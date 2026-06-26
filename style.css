@@ -1737,7 +1737,6 @@ body {
     height: 200px;
     max-width: 90%;
     margin: 0 auto;
-    /* THIS IS THE KEY FIX - moves box up by half its height */
     transform: translateY(-70%);
 }
 
@@ -1752,31 +1751,45 @@ body {
 }
 
 .stat-item {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     flex: 1;
     padding: 10px 0;
 }
 
+.num {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1;
+    min-width: 80px;            /* Prevents layout shift during animation */
+    text-align: center;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
 .stat-title {
-    font-size: 1.0rem;
-    font-weight: 300;
+    font-size: 1.02rem;
+    font-weight: 400;
     color: #ffffff;
-    margin: 0 0 0 0;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.tools-text {
+    font-size: 1.02rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.2;
     letter-spacing: 1px;
 }
-
-.stat-number {
-    font-size: 3.1rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0;
-}
-/* .start-number1{
-  font-size: 4rem;
-  margin-top: -9px;
-} */
-/* ====== RESPONSIVE ====== */
-
 /* ====== RESPONSIVE ====== */
 
 /* Large Tablets & Small Laptops */

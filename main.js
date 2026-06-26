@@ -75,3 +75,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// -------------------Orange Box-------------------------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.num');
+    
+    // Options for Intersection Observer
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Triggers when 50% of the element is visible
+    };
+    
+    // Function to animate counter
+    function animateCounter(counter) {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000; // Animation duration in milliseconds
+        const startTime = performance.now();
+        
+        // Update counter function
+        function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const currentValue = Math.floor(easeOutQuart * target);
+            
+            counter.textContent = currentValue;
+            
+            if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        }
+        
+        // Start animation
+        requestAnimationFrame(updateCounter);
+    }
+    
+    // Intersection Observer callback
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                observer.unobserve(counter); // Stop observing after animation starts
+            }
+        });
+    }
+    
+    // Create observer
+    const observer = new IntersectionObserver(handleIntersection, options);
+    
+    // Observe each counter
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
+});
