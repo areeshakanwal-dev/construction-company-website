@@ -119,10 +119,11 @@ body {
   background: none;
   color: rgb(255, 123, 0);
 }
-
+/* Active link - stays orange */
 .nav-list li a.active {
-  color: rgb(255, 123, 0);
+    color: #ff5a00;
 }
+
 
 /* contact now button */
 .contact-now {
