@@ -135,3 +135,24 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(counter);
     });
 });
+
+// ===== MAP FUNCTIONS =====
+
+function openFullscreen() {
+    const mapIframe = document.querySelector('.google-map iframe');
+    if (mapIframe) {
+        if (mapIframe.requestFullscreen) {
+            mapIframe.requestFullscreen();
+        } else if (mapIframe.webkitRequestFullscreen) {
+            mapIframe.webkitRequestFullscreen();
+        } else if (mapIframe.msRequestFullscreen) {
+            mapIframe.msRequestFullscreen();
+        }
+    }
+}
+
+function getDirections() {
+    const address = '198 West 21st Street, New York, NY 10010';
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
+    window.open(url, '_blank');
+}
