@@ -1480,15 +1480,29 @@ body {
         font-size: 1.5rem;
     }
 }
-/* ====== OUR PROJECTS SECTION ====== */
+/* ===== OUR PROJECTS SECTION ===== */
 .our-projects {
     padding: 100px 0;
     background: #f8f9fc;
+    overflow: hidden;
 }
 
+/* ===== HEADER + FILTER IN SAME ROW ===== */
 .projects-header {
-    text-align: center;
-    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-header.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-title {
@@ -1499,13 +1513,12 @@ body {
     letter-spacing: 2px;
 }
 
-/* ====== FILTER BUTTONS IN A ROW ====== */
+/* ===== FILTER BUTTONS ===== */
 .projects-filter {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0;
-    margin-bottom: 40px;
     flex-wrap: wrap;
 }
 
@@ -1521,19 +1534,6 @@ body {
     border-radius: 4px;
     position: relative;
 }
-
-.filter-btn::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: #FF5A00;
-    transition: width 0.3s ease;
-}
-
 .filter-btn:hover {
     color: #1a1a2e;
 }
@@ -1550,44 +1550,30 @@ body {
     width: 70%;
 }
 
-/* ====== PROJECTS GRID ====== */
+/* ===== PROJECTS GRID (NO ANIMATION - stays as is) ===== */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* ====== PROJECT CARD ====== */
+/* ===== PROJECT CARD STYLES (NO ANIMATION) ===== */
 .project-card {
     background: #ffffff;
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease;
-    border-bottom: 10px solid #f0f2f5;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-    position: relative;
-    background-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        transparent calc(100% - 10px),
-        #f0f2f5 calc(100% - 10px),
-        #f0f2f5 calc(100% - 1px),
-        #FF5A00 calc(100% - 1px),
-        #FF5A00 100%
-    );
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* ====== PROJECT IMAGE (stays same on hover) ====== */
 .project-image {
     width: 100%;
-    height: 250px;
+    height: 240px;
     overflow: hidden;
 }
 
@@ -1595,99 +1581,63 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: none;
+    transition: transform 0.4s ease;
 }
 
-/* No effect on image when card is hovered */
 .project-card:hover .project-image img {
-    transform: none;
+    transform: scale(1.05);
 }
 
-/* ====== PROJECT CONTENT - TEXT TURNS BLUE ON CARD HOVER ====== */
 .project-content {
     padding: 20px 25px 25px;
-    text-align: left;
-    background: #ffffff;
-    transition: background 0.3s ease;
-}
-.project-card:hover .project-content {
-    color: #efeef7;
-    background-color: #12067b;
 }
 
 .project-name {
     font-size: 1.2rem;
     font-weight: 700;
     color: #1a1a2e;
-    margin-bottom: 3px;
-    transition: color 0.3s ease;
+    margin-bottom: 4px;
 }
 
 .project-type {
     font-size: 0.9rem;
     color: #6c757d;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    margin: 0;
 }
 
-/* Text turns blue when card is hovered */
-/* Background changes on card hover */
-.project-card:hover .project-content {
-    background-color: #12067b;
-}
-
-/* Text turns white on card hover */
-.project-card:hover .project-name {
-    color: #ffffff;
-}
-
-.project-card:hover .project-type {
-    color: #ffffff;
-}
-/* ====== FILTER ANIMATION ====== */
-.project-card {
-    animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* ====== RESPONSIVE ====== */
+/* ===== RESPONSIVE ===== */
 @media screen and (max-width: 992px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
 
     .projects-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 768px) {
     .our-projects {
-        padding: 70px 0;
+        padding: 60px 0;
     }
 
     .projects-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .projects-filter {
-        gap: 0;
+        gap: 5px;
     }
 
     .filter-btn {
-        font-size: 0.8rem;
-        padding: 6px 14px;
+        padding: 6px 16px;
+        font-size: 0.85rem;
     }
 
     .projects-grid {
@@ -1704,36 +1654,36 @@ body {
 
 @media screen and (max-width: 480px) {
     .our-projects {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .projects-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
-    .projects-filter {
-        gap: 0;
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
 
     .filter-btn {
-        font-size: 0.65rem;
-        padding: 5px 10px;
+        padding: 5px 12px;
+        font-size: 0.8rem;
     }
 
     .project-image {
         height: 180px;
     }
 
+    .project-content {
+        padding: 15px 18px 20px;
+    }
+
     .project-name {
         font-size: 1rem;
     }
-
-    .project-content {
-        padding: 15px 20px 20px;
-    }
 }
-
-
 
 /* ====== LET'S TALK WITH US SECTION ====== */
 .lets-talk {

@@ -223,3 +223,24 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', animateWhoWeAre);
 });
 
+// ===== PROJECTS HEADER ANIMATION ONLY =====
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    }
+
+    function animateProjectsHeader() {
+        const header = document.querySelector('.projects-header');
+        if (header && isElementInViewport(header)) {
+            header.classList.add('visible');
+        }
+    }
+
+    // Run on load
+    setTimeout(animateProjectsHeader, 200);
+
+    // Run on scroll
+    window.addEventListener('scroll', animateProjectsHeader);
+    window.addEventListener('resize', animateProjectsHeader);
+});
