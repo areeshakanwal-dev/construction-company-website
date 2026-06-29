@@ -156,3 +156,70 @@ function getDirections() {
     const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
     window.open(url, '_blank');
 }
+
+// ===== SCROLL ANIMATION FOR SERVICES =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight - 100 &&
+            rect.bottom > 0
+        );
+    }
+
+    // Function to animate elements
+    function animateOnScroll() {
+        // Animate heading
+        const header = document.querySelector('.services-header');
+        if (header && isElementInViewport(header)) {
+            header.classList.add('visible');
+        }
+
+        // Animate service cards
+        const cards = document.querySelectorAll('.service-card');
+        cards.forEach(card => {
+            if (isElementInViewport(card)) {
+                card.classList.add('visible');
+            }
+        });
+    }
+
+    // Run animation on load
+    setTimeout(animateOnScroll, 100);
+
+    // Run animation on scroll
+    window.addEventListener('scroll', animateOnScroll);
+
+    // Run animation on resize
+    window.addEventListener('resize', animateOnScroll);
+});
+
+// ===== WHO WE ARE ANIMATION =====
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    }
+
+    function animateWhoWeAre() {
+        const content = document.querySelector('.who-we-are-content');
+        const image = document.querySelector('.who-we-are-image');
+
+        if (content && isElementInViewport(content)) {
+            content.classList.add('visible');
+        }
+
+        if (image && isElementInViewport(image)) {
+            image.classList.add('visible');
+        }
+    }
+
+    // Run on load
+    setTimeout(animateWhoWeAre, 200);
+
+    // Run on scroll
+    window.addEventListener('scroll', animateWhoWeAre);
+    window.addEventListener('resize', animateWhoWeAre);
+});
+
