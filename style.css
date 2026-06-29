@@ -1684,18 +1684,15 @@ body {
         font-size: 1rem;
     }
 }
-
 /* ====== LET'S TALK WITH US SECTION ====== */
 .lets-talk {
-    padding: 120px 0 300px 0; /* Remove bottom padding */
+    padding: 120px 0 300px 0;
     background: #0a0566;
     position: relative;
-    overflow: visible; /* Change from hidden to visible */
+    overflow: hidden;
 }
 
 /* ====== BACKGROUND TEXT "LET'S CHAT" ====== */
-
-
 .lets-talk-bg-text {
     position: absolute;
     top: 24%;
@@ -1703,7 +1700,7 @@ body {
     transform: translate(-50%, -50%);
     font-size: 8rem;
     font-weight: 900;
-    color: #0a0566; /* Blue text inside */
+    color: #0a0566;
     white-space: nowrap;
     letter-spacing: 4px;
     user-select: none;
@@ -1711,10 +1708,19 @@ body {
     z-index: 0;
     text-transform: uppercase;
     font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-    /* White border around text */
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
     text-stroke: 1px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transform: translate(-50%, 100%);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.lets-talk-bg-text.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* ====== ANIMATION STYLES ====== */
 .lets-talk-wrapper {
     display: flex;
     justify-content: flex-start;
@@ -1727,9 +1733,9 @@ body {
     max-width: 750px;
     text-align: left;
     margin-left: 4px;
-    
 }
 
+/* ====== TITLE (Moves from BOTTOM to TOP) ====== */
 .lets-talk-title {
     font-size: 3.5rem;
     font-weight: 900;
@@ -1739,9 +1745,17 @@ body {
     margin-left: 57px;
     letter-spacing: 1px;
     line-height: 1.2;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.lets-talk-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+/* ====== TEXT (Moves from BOTTOM to TOP) ====== */
 .lets-talk-text {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
@@ -1750,9 +1764,17 @@ body {
     margin-left: 60px;
     text-align: left;
     letter-spacing: 0.01px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.lets-talk-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
+/* ====== BUTTON (Moves from BOTTOM to TOP) ====== */
 .lets-talk-btn {
     display: inline-block;
     padding: 16px 30px;
@@ -1763,12 +1785,19 @@ body {
     letter-spacing: 2px;
     text-decoration: none;
     border-radius: 1px;
-    transition: all 0.3s ease;
     text-transform: uppercase;
     margin-left: 50px;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lets-talk-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Orange coming from top */
@@ -1794,7 +1823,7 @@ body {
     box-shadow: 0 15px 35px rgba(255, 90, 0, 0.3);
 }
 
-/* ====== ORANGE STATS BOX - Full Width ====== */
+/* ====== ORANGE STATS BOX (NO ANIMATION) ====== */
 .orange-stats-box {
     background: #FF5A00;
     padding: 50px 0;
@@ -1833,7 +1862,7 @@ body {
     font-weight: 700;
     color: rgba(255, 255, 255, 0.95);
     line-height: 1;
-    min-width: 80px;            /* Prevents layout shift during animation */
+    min-width: 80px;
     text-align: center;
 }
 
@@ -1859,9 +1888,8 @@ body {
     line-height: 1.2;
     letter-spacing: 1px;
 }
-/* ====== RESPONSIVE ====== */
 
-/* Large Tablets & Small Laptops */
+/* ====== RESPONSIVE ====== */
 @media screen and (max-width: 1200px) {
     .orange-stats-box {
         width: 95%;
@@ -1875,17 +1903,8 @@ body {
         gap: 30px;
         padding: 0 20px;
     }
-    
-    .stat-title {
-        font-size: 1.1rem;
-    }
-    
-    .stat-number {
-        font-size: 1rem;
-    }
 }
 
-/* Tablets */
 @media screen and (max-width: 992px) {
     .lets-talk {
         padding: 80px 0 250px 0;
@@ -1924,25 +1943,14 @@ body {
         min-height: 130px;
         padding: 35px 0;
         transform: translateY(-55%);
-        border-radius: 4px;
     }
     
     .stats-wrapper {
         gap: 25px;
         padding: 0 15px;
     }
-    
-    .stat-title {
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-    
-    .stat-number {
-        font-size: 0.95rem;
-    }
 }
 
-/* Mobile Devices */
 @media screen and (max-width: 768px) {
     .lets-talk {
         padding: 60px 0 200px 0;
@@ -1989,6 +1997,8 @@ body {
         font-size: 0.85rem;
         text-align: center;
         max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .orange-stats-box {
@@ -1997,7 +2007,6 @@ body {
         min-height: 120px;
         padding: 30px 0;
         transform: translateY(-45%);
-        border-radius: 4px;
     }
     
     .stats-wrapper {
@@ -2018,16 +2027,9 @@ body {
     
     .stat-title {
         font-size: 0.95rem;
-        letter-spacing: 2px;
-        margin-bottom: 4px;
-    }
-    
-    .stat-number {
-        font-size: 0.9rem;
     }
 }
 
-/* Small Phones */
 @media screen and (max-width: 480px) {
     .lets-talk {
         padding: 40px 0 160px 0;
@@ -2049,7 +2051,6 @@ body {
     .lets-talk-title {
         font-size: 1.8rem;
         margin-top: 20px;
-        letter-spacing: 0.5px;
     }
     
     .lets-talk-text {
@@ -2068,8 +2069,6 @@ body {
         width: 100%;
         padding: 25px 0;
         transform: translateY(-40%);
-        border-radius: 3px;
-        box-shadow: 0 10px 30px rgba(99, 99, 99, 0.15);
     }
     
     .stats-wrapper {
@@ -2083,122 +2082,14 @@ body {
     
     .stat-title {
         font-size: 0.85rem;
-        letter-spacing: 1px;
-    }
-    
-    .stat-number {
-        font-size: 0.8rem;
     }
 }
-
-/* Landscape Phones */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    .lets-talk {
-        padding: 40px 0 150px 0;
-        min-height: 120vh;
-    }
-    
-    .lets-talk-bg-text {
-        font-size: 3rem;
-        top: 20%;
-        left: 40%;
-    }
-    
-    .lets-talk-title {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-    
-    .lets-talk-text {
-        font-size: 0.85rem;
-        margin-bottom: 20px;
-    }
-    
-    .orange-stats-box {
-        padding: 25px 0;
-        transform: translateY(-35%);
-        min-height: 100px;
-    }
-    
-    .stats-wrapper {
-        flex-direction: row;
-        gap: 15px;
-    }
-    
-    .stat-item {
-        border-bottom: none;
-        padding: 5px 0;
-    }
-    
-    .stat-title {
-        font-size: 0.8rem;
-    }
-    
-    .stat-number {
-        font-size: 0.75rem;
-    }
-}
-
-/* Very Large Screens */
-@media screen and (min-width: 1400px) {
-    .lets-talk {
-        padding: 150px 0 350px 0;
-    }
-    
-    .lets-talk-bg-text {
-        font-size: 10rem;
-        top: 28%;
-        left: 48%;
-    }
-    
-    .lets-talk-title {
-        font-size: 4.5rem;
-        margin-left: 70px;
-    }
-    
-    .lets-talk-text {
-        font-size: 1.1rem;
-        margin-left: 75px;
-        max-width: 800px;
-    }
-    
-    .lets-talk-btn {
-        margin-left: 65px;
-        padding: 18px 35px;
-        font-size: 1rem;
-    }
-    
-    .orange-stats-box {
-        width: 1200px;
-        max-width: 85%;
-        padding: 60px 0;
-        transform: translateY(-75%);
-        min-height: 220px;
-    }
-    
-    .stat-title {
-        font-size: 1.4rem;
-        letter-spacing: 4px;
-    }
-    
-    .stat-number {
-        font-size: 1.3rem;
-    }
-}
-
-/* High DPI Screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .lets-talk-bg-text {
-        -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2);
-        text-stroke: 0.5px rgba(255, 255, 255, 0.2);
-    }
-}
-/* ====== TEAM SECTION ====== */
 /* ====== TEAM SECTION ====== */
 .team-section {
     padding: 100px 0;
     background: #ffffff;
     position: relative;
+    overflow: hidden;
 }
 
 .container {
@@ -2207,7 +2098,7 @@ body {
     padding: 0 20px;
 }
 
-/* ====== TEAM HEADING ====== */
+/* ====== TEAM HEADING (Moves from bottom to top) ====== */
 .team-heading {
     font-size: 3rem;
     font-weight: 900;
@@ -2217,6 +2108,14 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-heading.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ====== TEAM WRAPPER - 3 Cards in Row ====== */
@@ -2231,7 +2130,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* ====== TEAM CARD - NO BOUNDARY ====== */
+/* ====== TEAM CARD (Moves from bottom to top) ====== */
 .team-item {
     text-align: left;
     flex: 1;
@@ -2240,7 +2139,20 @@ body {
     padding: 0;
     background: transparent;
     transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for team cards */
+.team-item:nth-child(1) { transition-delay: 0.1s; }
+.team-item:nth-child(2) { transition-delay: 0.3s; }
+.team-item:nth-child(3) { transition-delay: 0.5s; }
 
 .team-item:hover {
     transform: translateY(-5px);
@@ -2260,9 +2172,6 @@ body {
 .team-item:hover .team-image {
     transform: scale(1.03);
 }
-/* .team-image {
-    transform: scale(1.03);
-} */
 
 .team-image img {
     width: 100%;
@@ -2272,14 +2181,6 @@ body {
 }
 
 /* ====== TEAM TEXT ====== */
-/* .team-role {
-    font-size: 0.8rem;
-    color: #FF5A00;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 5px;
-} */
-
 .team-role {
     font-size: 0.7rem;
     color: #FF5A00;
@@ -2296,12 +2197,11 @@ body {
     content: '';
     display: inline-block;
     width: 30px;
-    height: 2px;  /* Makes it bold/thick */
+    height: 2px;
     background: #FF5A00;
     margin-right: 1px;
-  
 }
-/* Change HTML to include underscores directly */
+
 .team-name {
     font-size: 1.5rem;
     font-weight: 800;
@@ -2321,12 +2221,6 @@ body {
     .team-heading {
         font-size: 2.5rem;
         margin-bottom: 50px;
-    }
-    
-    .team-heading::after {
-        width: 60px;
-        height: 3px;
-        bottom: -12px;
     }
     
     .team-wrapper {
@@ -2358,12 +2252,6 @@ body {
     .team-heading {
         font-size: 2rem;
         margin-bottom: 40px;
-    }
-    
-    .team-heading::after {
-        width: 50px;
-        height: 3px;
-        bottom: -10px;
     }
     
     .team-wrapper {
@@ -2403,12 +2291,6 @@ body {
         margin-bottom: 30px;
     }
     
-    .team-heading::after {
-        width: 40px;
-        height: 2px;
-        bottom: -8px;
-    }
-    
     .team-item {
         max-width: 300px;
     }
@@ -2419,7 +2301,6 @@ body {
     
     .team-role {
         font-size: 0.8rem;
-        letter-spacing: 1px;
     }
     
     .team-name {
@@ -2440,11 +2321,6 @@ body {
     .team-heading {
         font-size: 3.5rem;
         margin-bottom: 70px;
-    }
-    
-    .team-heading::after {
-        width: 100px;
-        height: 5px;
     }
     
     .team-wrapper {
@@ -2488,7 +2364,6 @@ body {
         font-size: 1.1rem;
     }
 }
-
 /* ---------------------testimonial------------------------- */
 .lets-talk2 {
     padding: 100px 0 100px 0; /* Remove bottom padding */

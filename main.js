@@ -244,3 +244,65 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateProjectsHeader);
     window.addEventListener('resize', animateProjectsHeader);
 });
+
+// ===== LET'S TALK ANIMATION - ALL AT SAME TIME =====
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    }
+
+    function animateLetsTalk() {
+        // ALL elements move from bottom to top at the SAME TIME
+        const elements = [
+            document.querySelector('.lets-talk-bg-text'),
+            document.querySelector('.lets-talk-title'),
+            document.querySelector('.lets-talk-text'),
+            document.querySelector('.lets-talk-btn')
+        ];
+
+        elements.forEach(el => {
+            if (el && isElementInViewport(el)) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    // Run on load
+    setTimeout(animateLetsTalk, 200);
+
+    // Run on scroll
+    window.addEventListener('scroll', animateLetsTalk);
+    window.addEventListener('resize', animateLetsTalk);
+});
+
+// ===== TEAM ANIMATION =====
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    }
+
+    function animateTeam() {
+        // Team Heading
+        const heading = document.querySelector('.team-heading');
+        if (heading && isElementInViewport(heading)) {
+            heading.classList.add('visible');
+        }
+
+        // Team Items (cards)
+        const teamItems = document.querySelectorAll('.team-item');
+        teamItems.forEach(item => {
+            if (isElementInViewport(item)) {
+                item.classList.add('visible');
+            }
+        });
+    }
+
+    // Run on load
+    setTimeout(animateTeam, 200);
+
+    // Run on scroll
+    window.addEventListener('scroll', animateTeam);
+    window.addEventListener('resize', animateTeam);
+});
