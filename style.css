@@ -2364,17 +2364,15 @@ body {
         font-size: 1.1rem;
     }
 }
-/* ---------------------testimonial------------------------- */
+/* ====== TESTIMONIAL SECTION ====== */
 .lets-talk2 {
-    padding: 100px 0 100px 0; /* Remove bottom padding */
+    padding: 100px 0 100px 0;
     background: #0a0566;
     position: relative;
-    overflow: visible; /* Change from hidden to visible */
+    overflow: hidden;
 }
 
-/* ====== BACKGROUND TEXT "LET'S CHAT" ====== */
-
-
+/* ====== BACKGROUND TEXT "EEEDBACK" (ANIMATED) ====== */
 .lets-talk-bg-text2 {
     position: absolute;
     top: 24%;
@@ -2382,7 +2380,7 @@ body {
     transform: translate(-50%, -50%);
     font-size: 8rem;
     font-weight: 900;
-    color: #0a0566; /* Blue text inside */
+    color: #0a0566;
     white-space: nowrap;
     letter-spacing: 4px;
     user-select: none;
@@ -2390,10 +2388,39 @@ body {
     z-index: 0;
     text-transform: uppercase;
     font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-    /* White border around text */
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
     text-stroke: 1px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transform: translate(-50%, 80%);
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.lets-talk-bg-text2.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* ====== TESTIMONIAL TITLE (ANIMATED) ====== */
+.lets-talk-title2 {
+    font-size: 4.4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 25px;
+    margin-top: 45px;
+    margin-left: 35px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lets-talk-title2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ====== ALL OTHER ELEMENTS (NO ANIMATION - stay in place) ====== */
 .lets-talk-wrapper2 {
     display: flex;
     justify-content: flex-start;
@@ -2406,20 +2433,7 @@ body {
     max-width: 750px;
     text-align: left;
     margin-left: 4px;
-    
 }
-
-.lets-talk-title2 {
-    font-size: 4.4rem;
-    font-weight: 900;
-    color: #ffffff;
-    margin-bottom: 25px;
-    margin-top: 45px;
-    margin-left: 35px;
-    letter-spacing: 1px;
-    line-height: 1.2;
-}
-
 
 .lets-talk-text2 {
     font-size: 1rem;
@@ -2431,89 +2445,87 @@ body {
     letter-spacing: 0.01px;
 }
 
-
-/* ====== AUTHOR — COLUMN WITH VERTICAL LINE ONLY ON LEFT SIDE ====== */
-.testimonial-author {
-  display: flex;
-  flex-direction: column;        /* stack name & role vertically */
-  align-items: flex-start;      /* align text to the left */
-  justify-content: center;
-  gap: 0.05rem;
-  width: 100%;
-  padding: 0.5rem 0;
-  padding-left: 50px;           /* distance from the vertical line */
-  position: relative;
+/* ====== ORANGE SYMBOL (NO ANIMATION) ====== */
+.orange-symbol {
+    color: transparent;
+    -webkit-text-stroke: 2.5px #FF5A00;
+    text-stroke: 2.5px #FF5A00;
+    font-size: 12rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 0;
+    margin-top: 170px;
+    margin-bottom: 0;
+    margin-right: 560px;
+    font-family: 'Franklin Gothic Heavy', 'Arial Black', sans-serif;
+    display: block;
+    font-weight: 900;
+    transform: rotate(180deg);
 }
 
-/* Vertical line only on the left side (like a wall) */
+/* ====== AUTHOR — COLUMN WITH VERTICAL LINE ====== */
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.05rem;
+    width: 100%;
+    padding: 0.5rem 0;
+    padding-left: 50px;
+    position: relative;
+}
+
 .testimonial-author::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  bottom: 10%;
-  left: 85px;
-  width: 2px;                   /* thickness of the vertical line */
-  background: #fa6f19;          /* white vertical line */
-  opacity: 1;
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 85px;
+    width: 2px;
+    background: #fa6f19;
+    opacity: 1;
 }
 
 .author-name,
 .author-role {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin-left: 50px;
-  color: #ffffff;               /* white text */
-  padding: 0.1rem 0;
-  position: relative;
-  z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 50px;
+    color: #ffffff;
+    padding: 0.1rem 0;
+    position: relative;
+    z-index: 1;
 }
 
 .author-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .author-role {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: #ffffff;
-  opacity: 0.8;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 0.8;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
-/* ====== HOLLOW ORANGE INVERTED COMMA ====== */
-.orange-symbol {
-  color: transparent;
-  -webkit-text-stroke: 2.5px #FF5A00;
-  text-stroke: 2.5px #FF5A00;
-  font-size: 12rem;
-  font-family: Georgia, 'Times New Roman', serif;
-  line-height: 0;
-  margin-top: 170px;
-  margin-bottom: 0;
-  margin-right: 560px;
-  font-family: 'Franklin Gothic Heavy', 'Arial Black', sans-serif;
-  display: block;
-  font-weight: 900;
-  transform: rotate(180deg); 
-}
-/* Responsive */
-@media (max-width: 500px) {
-  .testimonial-author {
-    padding-left: 15px;
-  }
-  .author-name {
-    font-size: 1.2rem;
-  }
-  .author-role {
-    font-size: 0.85rem;
-  }
-}
-/* ====== RESPONSIVE ====== */
 
-/* Large Tablets & Small Laptops */
+/* ====== RESPONSIVE ====== */
+@media (max-width: 500px) {
+    .testimonial-author {
+        padding-left: 15px;
+    }
+    .author-name {
+        font-size: 1.2rem;
+    }
+    .author-role {
+        font-size: 0.85rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .orange-stats-box {
         width: 95%;
@@ -2527,80 +2539,47 @@ body {
         gap: 30px;
         padding: 0 20px;
     }
-    
-    .stat-title {
-        font-size: 1.1rem;
-    }
-    
-    .stat-number {
-        font-size: 1rem;
-    }
 }
 
-/* Tablets */
 @media screen and (max-width: 992px) {
-    .lets-talk {
-        padding: 80px 0 250px 0;
+    .lets-talk2 {
+        padding: 80px 0 80px 0;
     }
     
-    .lets-talk-bg-text {
+    .lets-talk-bg-text2 {
         font-size: 5rem;
         top: 18%;
         left: 42%;
     }
     
-    .lets-talk-wrapper {
-        margin-left: 30px;
-    }
-    
-    .lets-talk-title {
+    .lets-talk-title2 {
         font-size: 2.8rem;
         margin-left: 30px;
         margin-top: 40px;
     }
     
-    .lets-talk-text {
+    .lets-talk-text2 {
         font-size: 0.95rem;
         margin-left: 35px;
     }
     
-    .lets-talk-btn {
-        margin-left: 30px;
-        padding: 14px 25px;
-        font-size: 0.85rem;
+    .orange-symbol {
+        font-size: 8rem;
+        margin-right: 300px;
+        margin-top: 120px;
     }
     
-    .orange-stats-box {
-        width: 95%;
-        height: auto;
-        min-height: 130px;
-        padding: 35px 0;
-        transform: translateY(-55%);
-        border-radius: 4px;
-    }
-    
-    .stats-wrapper {
-        gap: 25px;
-        padding: 0 15px;
-    }
-    
-    .stat-title {
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-    
-    .stat-number {
-        font-size: 0.95rem;
+    .testimonial-author::before {
+        left: 65px;
     }
 }
 
-/* Mobile Devices */
 @media screen and (max-width: 768px) {
-    .lets-talk {
-        padding: 60px 0 200px 0;
+    .lets-talk2 {
+        padding: 60px 0 60px 0;
     }
     
-    .lets-talk-bg-text {
+    .lets-talk-bg-text2 {
         font-size: 3.5rem;
         top: 15%;
         left: 40%;
@@ -2609,83 +2588,62 @@ body {
         text-stroke: 0.5px rgba(255, 255, 255, 0.2);
     }
     
-    .lets-talk-wrapper {
+    .lets-talk-wrapper2 {
         margin-left: 20px;
         justify-content: center;
     }
     
-    .lets-talk-content {
+    .lets-talk-content2 {
         max-width: 100%;
         padding: 0 15px;
         margin-left: 0;
     }
     
-    .lets-talk-title {
+    .lets-talk-title2 {
         font-size: 2.2rem;
         margin-left: 0;
         margin-top: 30px;
         text-align: center;
     }
     
-    .lets-talk-text {
+    .lets-talk-text2 {
         font-size: 0.9rem;
         margin-left: 0;
         text-align: center;
         padding: 0 10px;
     }
     
-    .lets-talk-btn {
-        display: block;
-        margin: 0 auto;
-        padding: 14px 25px;
-        font-size: 0.85rem;
+    .orange-symbol {
+        font-size: 6rem;
+        margin-right: 0;
+        margin-top: 80px;
         text-align: center;
-        max-width: 200px;
+        transform: rotate(180deg) scaleX(-1);
     }
     
-    .orange-stats-box {
-        width: 98%;
-        height: auto;
-        min-height: 120px;
-        padding: 30px 0;
-        transform: translateY(-45%);
-        border-radius: 4px;
+    .testimonial-author {
+        padding-left: 20px;
+        align-items: center;
     }
     
-    .stats-wrapper {
-        flex-direction: column;
-        gap: 15px;
-        padding: 0 15px;
+    .testimonial-author::before {
+        left: 20px;
+        top: 20%;
+        bottom: 20%;
     }
     
-    .stat-item {
-        width: 100%;
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
-    
-    .stat-item:last-child {
-        border-bottom: none;
-    }
-    
-    .stat-title {
-        font-size: 0.95rem;
-        letter-spacing: 2px;
-        margin-bottom: 4px;
-    }
-    
-    .stat-number {
-        font-size: 0.9rem;
+    .author-name,
+    .author-role {
+        margin-left: 30px;
     }
 }
 
-/* Small Phones */
 @media screen and (max-width: 480px) {
-    .lets-talk {
-        padding: 40px 0 160px 0;
+    .lets-talk2 {
+        padding: 40px 0 40px 0;
     }
     
-    .lets-talk-bg-text {
+    .lets-talk-bg-text2 {
         font-size: 2.5rem;
         top: 12%;
         left: 38%;
@@ -2694,189 +2652,79 @@ body {
         text-stroke: 0.3px rgba(255, 255, 255, 0.15);
     }
     
-    .lets-talk-wrapper {
-        margin-left: 10px;
-    }
-    
-    .lets-talk-title {
+    .lets-talk-title2 {
         font-size: 1.8rem;
         margin-top: 20px;
         letter-spacing: 0.5px;
     }
     
-    .lets-talk-text {
+    .lets-talk-text2 {
         font-size: 0.85rem;
         line-height: 1.7;
         margin-bottom: 25px;
     }
     
-    .lets-talk-btn {
-        padding: 12px 20px;
-        font-size: 0.8rem;
-        max-width: 170px;
+    .orange-symbol {
+        font-size: 4rem;
+        margin-top: 60px;
     }
     
-    .orange-stats-box {
-        width: 100%;
-        padding: 25px 0;
-        transform: translateY(-40%);
-        border-radius: 3px;
-        box-shadow: 0 10px 30px rgba(99, 99, 99, 0.15);
+    .testimonial-author::before {
+        left: 15px;
     }
     
-    .stats-wrapper {
-        gap: 10px;
-        padding: 0 10px;
+    .author-name,
+    .author-role {
+        margin-left: 25px;
     }
     
-    .stat-item {
-        padding: 5px 0;
+    .author-name {
+        font-size: 0.9rem;
     }
     
-    .stat-title {
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-    }
-    
-    .stat-number {
-        font-size: 0.8rem;
+    .author-role {
+        font-size: 0.65rem;
     }
 }
 
-/* Landscape Phones */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    .lets-talk {
-        padding: 40px 0 150px 0;
-        min-height: 120vh;
-    }
-    
-    .lets-talk-bg-text {
-        font-size: 3rem;
-        top: 20%;
-        left: 40%;
-    }
-    
-    .lets-talk-title {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-    
-    .lets-talk-text {
-        font-size: 0.85rem;
-        margin-bottom: 20px;
-    }
-    
-    .orange-stats-box {
-        padding: 25px 0;
-        transform: translateY(-35%);
-        min-height: 100px;
-    }
-    
-    .stats-wrapper {
-        flex-direction: row;
-        gap: 15px;
-    }
-    
-    .stat-item {
-        border-bottom: none;
-        padding: 5px 0;
-    }
-    
-    .stat-title {
-        font-size: 0.8rem;
-    }
-    
-    .stat-number {
-        font-size: 0.75rem;
-    }
-}
-
-/* Very Large Screens */
 @media screen and (min-width: 1400px) {
-    .lets-talk {
-        padding: 150px 0 350px 0;
+    .lets-talk2 {
+        padding: 150px 0 150px 0;
     }
     
-    .lets-talk-bg-text {
+    .lets-talk-bg-text2 {
         font-size: 10rem;
         top: 28%;
         left: 48%;
     }
     
-    .lets-talk-title {
+    .lets-talk-title2 {
         font-size: 4.5rem;
         margin-left: 70px;
     }
     
-    .lets-talk-text {
+    .lets-talk-text2 {
         font-size: 1.1rem;
         margin-left: 75px;
         max-width: 800px;
     }
     
-    .lets-talk-btn {
-        margin-left: 65px;
-        padding: 18px 35px;
-        font-size: 1rem;
+    .orange-symbol {
+        font-size: 15rem;
+        margin-right: 700px;
+        margin-top: 200px;
     }
-    
-    .orange-stats-box {
-        width: 1200px;
-        max-width: 85%;
-        padding: 60px 0;
-        transform: translateY(-75%);
-        min-height: 220px;
-    }
-    
-    .stat-title {
-        font-size: 1.4rem;
-        letter-spacing: 4px;
-    }
-    
-    .stat-number {
-        font-size: 1.3rem;
-    }
-}
-
-/* High DPI Screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .lets-talk-bg-text {
-        -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.2);
-        text-stroke: 0.5px rgba(255, 255, 255, 0.2);
-    }
-}
-/* ====== TEAM SECTION ====== */
-/* ====== TEAM SECTION ====== */
-.team-section {
-    padding: 100px 0;
-    background: #ffffff;
-    position: relative;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ====== TEAM HEADING ====== */
-.team-heading {
-    font-size: 3rem;
-    font-weight: 900;
-    color: #121213;
-    text-align: left;
-    margin-bottom: 60px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    position: relative;
-}
-/* ====== RESET ====== */
+}/* ====== RESET ====== */
 
 
-/* ====== NEWS HEADING ====== */
-.news-section{
+/* ====== NEWS SECTION ====== */
+.news-section {
     margin-top: 90px;
+    padding-bottom: 80px;
+    overflow: hidden;
 }
+
+/* ====== NEWS HEADING (ANIMATED) ====== */
 .news-heading {
     font-size: 4rem;
     font-weight: 700;
@@ -2888,6 +2736,14 @@ body {
     padding-bottom: 10px;
     border-bottom: 3px solid #ff5a00;
     display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-heading.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ====== NEWS GRID ====== */
@@ -2897,14 +2753,26 @@ body {
     gap: 30px;
 }
 
-/* ====== NEWS CARD ====== */
+/* ====== NEWS CARD (ANIMATED) ====== */
 .news-card {
     background: #ffffff;
     border-radius: 2px;
     overflow: hidden;
     border: 1px solid #e8e0d8;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.news-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for cards */
+.news-card:nth-child(1) { transition-delay: 0.1s; }
+.news-card:nth-child(2) { transition-delay: 0.3s; }
 
 .news-card:hover {
     transform: translateY(-5px);
@@ -2913,7 +2781,7 @@ body {
 
 /* ====== CARD IMAGE ====== */
 .card-image {
-    position: relative; /* Important for absolute positioning */
+    position: relative;
     height: 370px;
     overflow: hidden;
 }
@@ -2970,15 +2838,7 @@ body {
 }
 
 /* ====== CATEGORY ====== */
-/* .card-category {
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    letter-spacing: 1.8px;
-    color: #818080;
-    margin-bottom: 8px;
-} */
- .card-category {
+.card-category {
     font-size: 0.9rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -2989,7 +2849,6 @@ body {
     border-left: 3px solid #868281;
 }
 
-
 /* ====== TITLE ====== */
 .card-title {
     font-size: 1.8rem;
@@ -2999,8 +2858,8 @@ body {
     margin-bottom: 2px;
 }
 
-.card-title:hover{
-    color:#ff5a00
+.card-title:hover {
+    color: #ff5a00;
 }
 
 /* ====== READ MORE ====== */
@@ -3021,29 +2880,20 @@ body {
 .card-readmore .arrow {
     font-size: 1rem;
     font-weight: 300;
-
 }
 
 .card-readmore:hover {
     color: #ff5a00;
     text-decoration: underline;
-    text-underline-offset: 4px; /* Space between text and underline */
-    text-decoration-thickness: 2px; /* Thickness of underline */
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
-
-/* .card-readmore:hover .arrow {
-    transform: translateX(4px);
-} */
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-    body {
-        padding: 1.5rem;
-    }
-    
     .news-section {
-        padding: 30px 20px 35px 20px;
-        border-radius: 12px;
+        margin-top: 50px;
+        padding-bottom: 50px;
     }
     
     .news-wrapper {
@@ -3054,7 +2904,8 @@ body {
     }
     
     .news-heading {
-        font-size: 1.3rem;
+        font-size: 2rem;
+        margin-top: 50px;
         margin-bottom: 25px;
         padding-bottom: 8px;
     }
@@ -3073,27 +2924,36 @@ body {
     .card-date .month {
         font-size: 0.75rem;
     }
+    
+    .card-content {
+        padding: 30px 25px 25px 25px;
+    }
+    
+    .card-image {
+        height: 250px;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 1rem;
-    }
-    
     .news-section {
-        padding: 20px 15px 25px 15px;
-        border-radius: 10px;
+        margin-top: 30px;
+        padding-bottom: 30px;
     }
     
     .news-heading {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        margin-top: 30px;
         margin-bottom: 20px;
         padding-bottom: 6px;
         border-bottom-width: 2.5px;
     }
     
     .card-content {
-        padding: 14px 16px 18px 16px;
+        padding: 20px 18px 20px 18px;
     }
     
     .card-image {
@@ -3116,28 +2976,20 @@ body {
     }
     
     .card-category {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         letter-spacing: 1.5px;
+        padding-left: 10px;
     }
     
     .card-title {
-        font-size: 0.95rem;
-        color: #ffffff;
-    }
-    
-    .card-sub {
-        font-size: 0.8rem;
-        margin-bottom: 14px;
-        color: #c0b8ad;
+        font-size: 1rem;
     }
     
     .card-readmore {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         letter-spacing: 1px;
-        color: #ffffff;
     }
 }
-
 /* ====== RESET ====== */
 
 

@@ -306,3 +306,63 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateTeam);
     window.addEventListener('resize', animateTeam);
 });
+
+// ===== TESTIMONIAL ANIMATION =====
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    }
+
+    function animateTestimonial() {
+        // Background Text "EEEDBACK"
+        const bgText = document.querySelector('.lets-talk-bg-text2');
+        if (bgText && isElementInViewport(bgText)) {
+            bgText.classList.add('visible');
+        }
+
+        // Testimonial Title
+        const title = document.querySelector('.lets-talk-title2');
+        if (title && isElementInViewport(title)) {
+            title.classList.add('visible');
+        }
+    }
+
+    // Run on load
+    setTimeout(animateTestimonial, 200);
+
+    // Run on scroll
+    window.addEventListener('scroll', animateTestimonial);
+    window.addEventListener('resize', animateTestimonial);
+});
+
+// ===== NEWS SECTION ANIMATION =====
+document.addEventListener('DOMContentLoaded', function() {
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top < window.innerHeight - 80 && rect.bottom > 0;
+    }
+
+    function animateNews() {
+        // News Heading
+        const heading = document.querySelector('.news-heading');
+        if (heading && isElementInViewport(heading)) {
+            heading.classList.add('visible');
+        }
+
+        // News Cards
+        const cards = document.querySelectorAll('.news-card');
+        cards.forEach(card => {
+            if (isElementInViewport(card)) {
+                card.classList.add('visible');
+            }
+        });
+    }
+
+    // Run on load
+    setTimeout(animateNews, 200);
+
+    // Run on scroll
+    window.addEventListener('scroll', animateNews);
+    window.addEventListener('resize', animateNews);
+});
