@@ -382,3 +382,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// ===== DROPDOWN ON MOBILE =====
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('open');
+                }
+            });
+        }
+    });
+});
