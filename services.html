@@ -60,28 +60,46 @@
         </div> -->
     </header>
 
-    <div class="nav-bar">
+<div class="nav-bar">
         <div class="container nav-bar-inner">
             <div class="logo">
                 <span class="logo-icon"><img
-                        src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/loder-logo.webp"></span>
-                <span class="logo-text">Construction</span>
+                        src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.webp"></span>
             </div>
 
             <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
                     <li><a href="projects.html" class="nav-link">Projects</a></li>
                     <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="pages.html" class="nav-link">Pages</a></li>
+
+                    <!-- Blog with Dropdown -->
+                    <li class="dropdown">
+                        <a href="blog.html" class="nav-link">Blog </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Pages with Dropdown -->
+                    <li class="dropdown">
+                        <a href="pages.html" class="nav-link">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="elements.html">Element</a></li>
+                            <li><a href="projects-details.html">Projects Details</a></li>
+                            <li><a href="services-details.html">Services Details</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
+
             <div class="contact-now">
-                <a href="#" class="btn-contact">CONTACT NOW</a>
+                <a href="contact.html" class="btn-contact">CONTACT NOW</a>
             </div>
 
             <div class="mobile-toggle" id="mobileToggle">
