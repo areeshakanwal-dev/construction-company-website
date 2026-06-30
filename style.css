@@ -1506,9 +1506,10 @@ body {
 }
 
 .projects-title {
-    font-size: 3.5rem;
+    font-size: 4.7rem;
     font-weight: 900;
     color: #000000;
+    font-family: "Barlow Condensed", sans-serif;
     margin: 0;
     letter-spacing: 2px;
 }
@@ -3607,3 +3608,94 @@ body {
     }
 }
 
+/* ====== DROPDOWN - ONLY ADD THIS ====== */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 30px);
+    left: 0;
+    min-width: 200px;
+    background: #ffffff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 10px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    list-style: none;
+    z-index: 999;
+    border: 1px solid #eee;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 24px;
+    color: #1a1a1a;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+    background: #f8f9fc;
+    color: #ff5a00;
+    border-left-color: #ff5a00;
+}
+
+.dropdown-menu li a::after {
+    display: none;
+}
+
+.fa-chevron-down {
+    font-size: 0.6rem;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* ====== MOBILE RESPONSIVE (ADD THIS) ====== */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        padding: 10px 0 10px 20px;
+        background: transparent;
+        border: none;
+        display: none;
+    }
+    
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-menu li a {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+        border-left: 2px solid #ddd;
+    }
+    
+    .dropdown-menu li a:hover {
+        padding-left: 20px;
+    }
+}

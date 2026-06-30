@@ -7,6 +7,8 @@
     <title>Construction · header</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Archivo+Black&family=Kanit:wght@400;600;700;800&family=Prompt:wght@400;600;700;800&family=Manrope:wght@400;600;700;800&family=Inter:wght@400;600;700;800&family=Be+Vietnam+Pro:wght@400;600;700;800&family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Epilogue:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -61,34 +63,42 @@
     </header>
 
     <div class="nav-bar">
-        <div class="container nav-bar-inner">
-            <div class="logo">
-                <span class="logo-icon"><img
-                        src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.webp"></span>
-                <span class="logo-text"></span>
-            </div>
+    <div class="container nav-bar-inner">
+        <div class="logo">
+            <span class="logo-icon"><img
+                    src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.webp"></span>
+        </div>
 
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="pages.html" class="nav-link">Pages</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+        <nav class="main-nav">
+            <ul class="nav-list" id="navList">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                
+                <!-- ONLY THIS PART CHANGED - Blog with Dropdown -->
+                <li class="dropdown">
+                    <a href="blog.html" class="nav-link">Blog <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog-details.html">Blog Details</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="pages.html" class="nav-link">Pages</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
 
-            <div class="contact-now">
-                <a href="contact.html" class="btn-contact">CONTACT NOW</a>
-            </div>
+        <div class="contact-now">
+            <a href="contact.html" class="btn-contact">CONTACT NOW</a>
+        </div>
 
-            <div class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </div>
+        <div class="mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
         </div>
     </div>
+</div>
 
     <!-- Services Section -->
     <section class="services-hero">
