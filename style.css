@@ -4841,7 +4841,7 @@ body {
 
 .btn-disable {
     background: #e9ecef;
-    color: #999;
+    color: #12067b;
     border-color: #ddd;
     cursor: not-allowed;
     opacity: 0.6;
@@ -4951,6 +4951,9 @@ body {
     color: #999;
     cursor: not-allowed;
     opacity: 0.6;
+}
+.btn-outline-disable{
+    color: #12067b;
 }
 
 .btn-outline-disable:hover {
@@ -5120,7 +5123,7 @@ body {
 
 .btn-disable-rounded {
     background: #e9ecef;
-    color: #999;
+     color: #2e08ba;
     border-color: #ddd;
     cursor: not-allowed;
     opacity: 0.6;
@@ -5227,7 +5230,7 @@ body {
 /* Outline - Disable */
 .btn-outline-disable-rounded {
     border-color: #ddd;
-    color: #999;
+    color: #2e08ba;
     cursor: not-allowed;
     opacity: 0.6;
 }
@@ -5255,5 +5258,425 @@ body {
     .btn-sample-rounded,
     .btn-sample-outline-rounded {
         text-align: center;
+    }
+}
+
+/* ====== BUTTON SIZES ====== */
+.button-sizes-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 0.5px solid #e8e0d8;
+}
+
+.button-sizes-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.button-sizes-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.button-sizes-row:last-child {
+    margin-bottom: 0;
+}
+
+/* ====== BASE BUTTON STYLES - SQUARE ====== */
+.btn-size {
+    font-weight: 500;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: inline-block;
+    text-align: center;
+    font-family: inherit;
+}
+
+.btn-size:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-size:active {
+    transform: scale(0.96);
+}
+
+/* ====== ROW 1: FILLED → EMPTY ON HOVER ====== */
+/* Blue - Filled */
+.btn-primary-filled {
+    background: #01264c;
+    color: #ffffff;
+    border-color: #01264c;
+}
+
+.btn-primary-filled:hover {
+    background: transparent;
+    color: #01264c;
+    border-color: #01264c;
+}
+
+/* Orange - Filled */
+.btn-success-filled {
+    background: #ff5a00;
+    color: #ffffff;
+    border-color: #ff5a00;
+}
+
+.btn-success-filled:hover {
+    background: transparent;
+    color: #ff5a00;
+    border-color: #ff5a00;
+}
+
+/* ====== ROW 2: EMPTY → FILLED ON HOVER ====== */
+/* Blue - Outline */
+.btn-primary-outline {
+    background: transparent;
+    color: #01264c;
+    border-color: #01264c;
+}
+
+.btn-primary-outline:hover {
+    background: #01264c;
+    color: #ffffff;
+    border-color: #01264c;
+}
+
+/* Orange - Outline */
+.btn-success-outline {
+    background: transparent;
+    color: #1ce7f9;
+    border-color: #1ce7f9;
+}
+
+.btn-success-outline:hover {
+    background: #1ce7f9;
+    color: #ffffff;
+    border-color: #1ce7f9;
+}
+
+/* ====== BUTTON SIZES ====== */
+.btn-xl {
+    padding: 16px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-lg {
+    padding: 14px 34px;
+    font-size: 1rem;
+}
+
+.btn-default {
+    padding: 12px 28px;
+    font-size: 0.95rem;
+}
+
+.btn-md {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+}
+
+.btn-sm {
+    padding: 6px 16px;
+    font-size: 0.75rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .button-sizes-row {
+        gap: 10px;
+    }
+    
+    .btn-xl {
+        padding: 14px 32px;
+        font-size: 1rem;
+    }
+    
+    .btn-lg {
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-default {
+        padding: 10px 24px;
+        font-size: 0.85rem;
+    }
+    
+    .btn-md {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-sm {
+        padding: 5px 14px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-sizes-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-size {
+        text-align: center;
+    }
+}
+
+/* ====== LEFT ALIGNED SECTION ====== */
+.left-aligned-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.left-aligned-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* ====== LEFT SIDE: Heading + Image ====== */
+.left-aligned-left {
+    flex: 0 0 380px;
+    max-width: 300px;
+}
+
+.left-aligned-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    /* border-bottom: 2px solid #ff5a00; */
+    display: inline-block;
+}
+
+.left-aligned-image {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    min-width: 20px;
+}
+
+.left-aligned-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    min-width: 20px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ====== RIGHT SIDE: Content ====== */
+.left-aligned-content {
+    flex: 1;
+}
+
+.left-aligned-content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.9;
+    margin-top: 70px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+    .left-aligned-wrapper {
+        gap: 30px;
+    }
+    
+    .left-aligned-left {
+        flex: 0 0 300px;
+        max-width: 300px;
+    }
+    
+    .left-aligned-image {
+        min-height: 250px;
+    }
+    
+    .left-aligned-image img {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-aligned-section {
+        padding: 50px 0;
+    }
+    
+    .left-aligned-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .left-aligned-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .left-aligned-title {
+        font-size: 1.6rem;
+    }
+    
+    .left-aligned-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+    
+    .left-aligned-image {
+        min-height: 200px;
+    }
+    
+    .left-aligned-image img {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-aligned-section {
+        padding: 30px 0;
+    }
+    
+    .left-aligned-title {
+        font-size: 1.3rem;
+    }
+    
+    .left-aligned-content p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    .left-aligned-image {
+        min-height: 180px;
+    }
+    
+    .left-aligned-image img {
+        min-height: 180px;
+    }
+}
+
+/* ====== RIGHT ALIGNED SECTION ====== */
+.right-aligned-section {
+    padding: 80px 0;
+    background: #f8f9fc;
+}
+
+.right-aligned-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+/* ====== LEFT SIDE: Heading + Content ====== */
+.right-aligned-left {
+    flex: 1;
+}
+
+.right-aligned-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.right-aligned-content p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.9;
+    margin: 0 0 20px 0;
+}
+
+.right-aligned-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ====== RIGHT SIDE: Image (SMALLER) ====== */
+.right-aligned-image {
+    flex: 0 0 350px;      /* ← Smaller */
+    max-width: 300px;     /* ← Smaller */
+    max-height: 300px;
+    margin-top: 70px;
+}
+
+.right-aligned-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 150px;    /* ← Smaller */
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 992px) {
+    .right-aligned-wrapper {
+        gap: 30px;
+    }
+    
+    .right-aligned-image {
+        flex: 0 0 120px;
+        max-width: 120px;
+    }
+    
+    .right-aligned-image img {
+        min-height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .right-aligned-section {
+        padding: 50px 0;
+    }
+    
+    .right-aligned-wrapper {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    
+    .right-aligned-title {
+        font-size: 1.6rem;
+    }
+    
+    .right-aligned-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+    
+    .right-aligned-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .right-aligned-image img {
+        min-height: 200px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .right-aligned-section {
+        padding: 30px 0;
+    }
+    
+    .right-aligned-title {
+        font-size: 1.3rem;
+    }
+    
+    .right-aligned-content p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    .right-aligned-image img {
+        min-height: 180px;
     }
 }
