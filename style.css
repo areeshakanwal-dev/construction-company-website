@@ -19,7 +19,7 @@ body {
 
 /* ----- top bar ----- */
 .top-bar {
-  background: rgba(3, 4, 94);
+  background: rgba(2, 3, 88,0.9);
   color: #feffff;
   padding: 10px 0;
   font-size: 0.9rem;
@@ -118,56 +118,6 @@ body {
 .nav-list li a.active {
     color: #ff5a00;
 }
-
-
-/* contact now button */
-/* .contact-now {
-  margin-left: 16px;
-}
-
-.btn-contact {
-  background: #ff6600;
-  color: white;
-  font-weight: 700;
-  padding: 10px 28px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  transition: all 0.4s ease;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.btn-contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #FF5A00, #FF5A00, #FF5A00);
-  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
-  border-radius: 40px;
-}
-
-.btn-contact:hover {
-  color: white;
-  border-color: #b8921a;
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(184, 146, 26, 0.3);
-}
-
-.btn-contact:hover::before {
-  left: 0;
-}
-
-.btn-contact:active {
-  transform: scale(0.95);
-} */
 
 .contact-now {
     margin-left: 16px;
@@ -297,34 +247,72 @@ body {
   backface-visibility: visible !important;
 }
 
-/* ----- responsive ----- */
+/* ====== RESPONSIVE (ADDED) ====== */
+
+/* Large screens up to 1200px */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .nav-bar {
+    padding: 16px 40px;
+  }
+}
+
+/* Tablets & Small Laptops up to 992px */
 @media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  
   .nav-list li a {
     padding: 6px 12px;
     font-size: 0.9rem;
   }
 
   .btn-contact {
-    padding: 8px 18px;
+    padding: 12px 18px;
     font-size: 0.8rem;
+  }
+  
+  .contact-info span {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+  
+  .nav-bar {
+    padding: 16px 30px;
   }
 }
 
+/* Tablets up to 820px */
 @media screen and (max-width: 820px) {
   .top-bar-inner {
     flex-direction: column;
     align-items: flex-start;
-    gap: 4px;
+    gap: 6px;
   }
 
   .contact-info span {
-    margin-right: 16px;
+    margin-right: 14px;
+    margin-left: 0;
+  }
+  
+  .social-icons {
+    margin-left: 0;
   }
 }
 
+/* Mobile Devices up to 768px */
 @media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
   .nav-bar {
-    padding: 12px 0;
+    padding: 12px 20px;
   }
 
   .main-nav {
@@ -354,13 +342,14 @@ body {
     display: block;
     padding: 12px 0;
     border-radius: 0;
-    border-bottom: 1px solid #eef2f7;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
   }
 
   .nav-list li a.active {
     background: transparent;
-    color: #e8b830;
-    border-bottom: 3px solid #e8b830;
+    color: #ff5a00;
+    border-bottom: 3px solid #ff5a00;
   }
 
   .contact-now {
@@ -369,46 +358,159 @@ body {
   }
 
   .btn-contact {
-    padding: 8px 22px;
-    font-size: 0.9rem;
+    padding: 10px 22px;
+    font-size: 0.85rem;
   }
 
   .mobile-toggle {
     display: block;
     order: 1;
+    color: #f1f3f6;
   }
 
   .logo {
     order: 0;
+    font-size: 1.4rem;
   }
 
   .nav-bar-inner {
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  
+  .top-bar {
+    padding: 8px 0;
+    font-size: 0.8rem;
+  }
+  
+  .social-icons {
+    gap: 8px;
+  }
+  
+  .flip-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .flip-icon i {
+    font-size: 0.9rem;
+  }
 }
 
+/* Small Phones up to 480px */
 @media screen and (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .top-bar {
+    padding: 6px 0;
+    font-size: 0.7rem;
+  }
+  
   .top-bar-inner {
-    font-size: 0.8rem;
+    gap: 4px;
   }
 
   .contact-info span {
-    display: flex;
+    display: inline-flex;
     margin-right: 8px;
+    font-size: 0.7rem;
+  }
+  
+  .contact-info i {
+    width: 14px;
+    font-size: 0.7rem;
   }
 
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    gap: 6px;
   }
 
   .logo-icon {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .nav-bar {
+    padding: 10px 15px;
+  }
+  
+  .btn-contact {
+    padding: 8px 16px;
+    font-size: 0.75rem;
+  }
+  
+  .mobile-toggle {
     font-size: 1.4rem;
+  }
+  
+  .nav-list li a {
+    padding: 10px 0;
+    font-size: 0.85rem;
+  }
+  
+  .social-icons {
+    gap: 4px;
+  }
+  
+  .flip-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .flip-icon i {
+    font-size: 0.8rem;
   }
 }
 
+/* Very Small Phones up to 360px */
+@media screen and (max-width: 360px) {
+  .contact-info span {
+    font-size: 0.6rem;
+    margin-right: 4px;
+  }
+  
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .btn-contact {
+    padding: 6px 12px;
+    font-size: 0.65rem;
+  }
+  
+  .nav-bar {
+    padding: 8px 10px;
+  }
+  
+  .mobile-toggle {
+    font-size: 1.2rem;
+  }
+}
+
+/* Landscape Phones */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .top-bar {
+    padding: 4px 0;
+    font-size: 0.7rem;
+  }
+  
+  .nav-bar {
+    padding: 8px 20px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .btn-contact {
+    padding: 6px 14px;
+    font-size: 0.7rem;
+  }
+}
 /* --------------------- Services Section ------------------------------ */
 
 .services-hero {
@@ -2996,7 +3098,7 @@ body {
 
 /* ====== FOOTER STYLES ====== */
 .footer {
-    background-color: #1a1a1a;
+    background-color: rgba(7, 7, 7, 1);
     color: #ffffff;
     padding: 200px 0 0 0;
     margin-top: 300px;
@@ -3010,7 +3112,7 @@ body {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr 1.2fr 1fr;
     gap: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(7, 7, 7, 1);
 }
 
 /* ====== COLUMN 1: CONSTRUCTION ====== */
@@ -3038,16 +3140,6 @@ body {
     margin-bottom: 22px;
     letter-spacing: 1px;
     position: relative;
-}
-
-.footer-subheading::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: #ff5a00;
 }
 
 .footer-links {
@@ -3089,9 +3181,9 @@ body {
 }
 
 .signup-btn {
-    background-color: #ff5a00;
+    background-color: #393837;
     color: #ffffff;
-    padding: 7px 20px;
+    padding: 12px 20px;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -3102,11 +3194,11 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
     white-space: nowrap;
 }
-
+/* 
 .signup-btn:hover {
     background-color: #e64a00;
     transform: scale(1.05);
-}
+} */
 
 .footer-address {
     font-size: 0.95rem;
@@ -6049,3 +6141,6 @@ body {
         margin: 20px 0 10px 0;
     }
 }
+
+/* --------------------rp------------------ */
+
