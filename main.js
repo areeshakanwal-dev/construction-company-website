@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', animateNews);
 });
 
-// ===== DROPDOWN ON MOBILE =====
+// ===== DROPDOWN ON MOBILE(blog) =====
 document.addEventListener('DOMContentLoaded', function() {
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
@@ -383,7 +383,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// ===== DROPDOWN ON MOBILE =====
+// ===== DROPDOWN ON MOBILE(pages) =====
 document.addEventListener('DOMContentLoaded', function() {
     const dropdowns = document.querySelectorAll('.dropdown');
     dropdowns.forEach(dropdown => {
