@@ -5886,3 +5886,101 @@ body {
         line-height: 1.7;
     }
 }
+/* ....................element protion......................... */
+
+/* ====== NORMAL IMAGE (NOT FULL COVER) ====== */
+.normal-image-section {
+    padding: 40px 0;
+    background: #f8f9fc;
+}
+
+.normal-image-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+.normal-image-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .normal-image-wrapper {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+
+
+/* ====== ABOUT CONTENT SECTION ====== */
+.about-content-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ====== TEXT STYLES ====== */
+.about-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+/* ====== HEADING STYLES ====== */
+.about-heading {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1a1a1a;
+    margin: 35px 0 15px 0;
+    padding-left: 1px;
+    /* border-left: 4px solid #ff5a00; */
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .about-content-section {
+        padding: 50px 0;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+    
+    .about-heading {
+        font-size: 1.3rem;
+        padding-left: 12px;
+        margin: 25px 0 12px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content-section {
+        padding: 30px 0;
+    }
+    
+    .about-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+    
+    .about-heading {
+        font-size: 1.1rem;
+        padding-left: 10px;
+        margin: 20px 0 10px 0;
+    }
+}
