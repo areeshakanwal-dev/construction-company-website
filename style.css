@@ -4591,3 +4591,669 @@ body {
 .recent-comments i {
     margin-right: 3px;
 }
+
+/* ====== TEXT SAMPLE SECTION ====== */
+.text-sample-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.text-sample-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff5a00;
+    display: inline-block;
+}
+
+.text-sample-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* ====== TEXT STYLES ====== */
+.text-sample-content strong {
+    color: rgb(21, 21, 94);
+    font-weight: 700;
+}
+
+.text-sample-content em {
+    color: rgb(21, 21, 94);
+    font-style: italic;
+}
+
+.text-sample-content sup {
+    color: rgb(21, 21, 94);
+    font-size: 0.7rem;
+    vertical-align: super;
+}
+
+.text-sample-content del {
+    color: rgb(21, 21, 94);
+    text-decoration: line-through;
+}
+
+.text-sample-content u {
+    color: rgb(21, 21, 94);
+    text-decoration: underline;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .text-sample-section {
+        padding: 50px 0;
+    }
+    
+    .text-sample-title {
+        font-size: 1.6rem;
+    }
+    
+    .text-sample-content p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-sample-section {
+        padding: 30px 0;
+    }
+    
+    .text-sample-title {
+        font-size: 1.3rem;
+    }
+    
+    .text-sample-content p {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+}
+/* ====== TEXT SAMPLE & BUTTONS SECTION ====== */
+.text-sample-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.text-sample-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff5a00;
+    display: inline-block;
+}
+
+.text-sample-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.9;
+    margin: 0 0 40px 0;
+}
+
+/* ====== TEXT STYLES ====== */
+.text-sample-content strong {
+    color: #ff5a00;
+    font-weight: 700;
+}
+
+.text-sample-content em {
+    color: #ff5a00;
+    font-style: italic;
+}
+
+.text-sample-content sup {
+    color: #ff5a00;
+    font-size: 0.7rem;
+    vertical-align: super;
+}
+
+.text-sample-content sub {
+    color: #ff5a00;
+    font-size: 0.7rem;
+    vertical-align: sub;
+}
+
+.text-sample-content del {
+    color: #ff5a00;
+    text-decoration: line-through;
+}
+
+.text-sample-content u {
+    color: #ff5a00;
+    text-decoration: underline;
+}
+
+/* ====== SAMPLE BUTTONS ====== */
+.sample-buttons-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e8e0d8;
+}
+
+.sample-buttons-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* ====== ROW 1: FILLED BUTTONS ====== */
+.btn-sample {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-default {
+    background: #f8f9fc;
+    color: #1a1a1a;
+    border-color: #ddd;
+}
+
+.btn-default:hover {
+    background: #e9ecef;
+}
+
+.btn-primary {
+    background: #ff5a00;
+    color: #ffffff;
+    border-color: #ff5a00;
+}
+
+.btn-primary:hover {
+    background: #e04e00;
+    border-color: #e04e00;
+}
+
+.btn-success {
+    background: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background: #218838;
+    border-color: #218838;
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: #ffffff;
+    border-color: #17a2b8;
+}
+
+.btn-info:hover {
+    background: #138496;
+    border-color: #138496;
+}
+
+.btn-warning {
+    background: #ffc107;
+    color: #1a1a1a;
+    border-color: #ffc107;
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: #ffffff;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    border-color: #c82333;
+}
+
+.btn-link {
+    background: transparent;
+    color: #ff5a00;
+    border-color: transparent;
+    text-decoration: underline;
+}
+
+.btn-link:hover {
+    color: #e04e00;
+}
+
+.btn-disable {
+    background: #e9ecef;
+    color: #999;
+    border-color: #ddd;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-disable:hover {
+    background: #e9ecef;
+    color: #999;
+}
+
+/* ====== ROW 2: OUTLINE BUTTONS (fill on hover) ====== */
+.btn-sample-outline {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    background: transparent;
+    color: #1a1a1a;
+}
+
+/* Outline - Default */
+.btn-outline-default {
+    border-color: #ddd;
+    color: #1a1a1a;
+}
+
+.btn-outline-default:hover {
+    background: #f8f9fc;
+    border-color: #ddd;
+}
+
+/* Outline - Primary */
+.btn-outline-primary {
+    border-color: #ff5a00;
+    color: #ff5a00;
+}
+
+.btn-outline-primary:hover {
+    background: #ff5a00;
+    color: #ffffff;
+}
+
+/* Outline - Success */
+.btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success:hover {
+    background: #28a745;
+    color: #ffffff;
+}
+
+/* Outline - Info */
+.btn-outline-info {
+    border-color: #17a2b8;
+    color: #17a2b8;
+}
+
+.btn-outline-info:hover {
+    background: #17a2b8;
+    color: #ffffff;
+}
+
+/* Outline - Warning */
+.btn-outline-warning {
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+.btn-outline-warning:hover {
+    background: #ffc107;
+    color: #1a1a1a;
+}
+
+/* Outline - Danger */
+.btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+/* Outline - Link */
+.btn-outline-link {
+    border-color: transparent;
+    color: #ff5a00;
+    text-decoration: underline;
+}
+
+.btn-outline-link:hover {
+    color: #e04e00;
+    background: transparent;
+}
+
+/* Outline - Disable */
+.btn-outline-disable {
+    border-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-outline-disable:hover {
+    background: transparent;
+    color: #999;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .text-sample-section {
+        padding: 50px 0;
+    }
+    
+    .text-sample-title {
+        font-size: 1.6rem;
+    }
+    
+    .text-sample-content p {
+        font-size: 0.95rem;
+    }
+    
+    .button-row {
+        gap: 10px;
+    }
+    
+    .btn-sample,
+    .btn-sample-outline {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-sample-section {
+        padding: 30px 0;
+    }
+    
+    .text-sample-title {
+        font-size: 1.3rem;
+    }
+    
+    .text-sample-content p {
+        font-size: 0.9rem;
+    }
+    
+    .button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-sample,
+    .btn-sample-outline {
+        text-align: center;
+    }
+}
+
+/* ====== SAMPLE BUTTONS SECTION ====== */
+.sample-buttons-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e8e0d8;
+}
+
+.sample-buttons-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* ====== ROW 1: FILLED BUTTONS WITH ROUNDED CORNERS ====== */
+.btn-sample-rounded {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-default-rounded {
+    background: #f8f9fc;
+    color: #1a1a1a;
+    border-color: #ddd;
+}
+
+.btn-default-rounded:hover {
+    background: #e9ecef;
+}
+
+.btn-primary-rounded {
+    background: #ff5a00;
+    color: #ffffff;
+    border-color: #ff5a00;
+}
+
+.btn-primary-rounded:hover {
+    background: #e04e00;
+    border-color: #e04e00;
+}
+
+.btn-success-rounded {
+    background: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+}
+
+.btn-success-rounded:hover {
+    background: #218838;
+    border-color: #218838;
+}
+
+.btn-info-rounded {
+    background: #17a2b8;
+    color: #ffffff;
+    border-color: #17a2b8;
+}
+
+.btn-info-rounded:hover {
+    background: #138496;
+    border-color: #138496;
+}
+
+.btn-warning-rounded {
+    background: #ffc107;
+    color: #1a1a1a;
+    border-color: #ffc107;
+}
+
+.btn-warning-rounded:hover {
+    background: #e0a800;
+    border-color: #e0a800;
+}
+
+.btn-danger-rounded {
+    background: #dc3545;
+    color: #ffffff;
+    border-color: #dc3545;
+}
+
+.btn-danger-rounded:hover {
+    background: #c82333;
+    border-color: #c82333;
+}
+
+.btn-link-rounded {
+    background: transparent;
+    color: #ff5a00;
+    border-color: transparent;
+    text-decoration: underline;
+}
+
+.btn-link-rounded:hover {
+    color: #e04e00;
+}
+
+.btn-disable-rounded {
+    background: #e9ecef;
+    color: #999;
+    border-color: #ddd;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-disable-rounded:hover {
+    background: #e9ecef;
+    color: #999;
+}
+
+/* ====== ROW 2: OUTLINE BUTTONS WITH ROUNDED CORNERS ====== */
+.btn-sample-outline-rounded {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    background: transparent;
+    color: #1a1a1a;
+}
+
+/* Outline - Default */
+.btn-outline-default-rounded {
+    border-color: #ddd;
+    color: #1a1a1a;
+}
+
+.btn-outline-default-rounded:hover {
+    background: #f8f9fc;
+    border-color: #ddd;
+}
+
+/* Outline - Primary */
+.btn-outline-primary-rounded {
+    border-color: #ff5a00;
+    color: #ff5a00;
+}
+
+.btn-outline-primary-rounded:hover {
+    background: #ff5a00;
+    color: #ffffff;
+}
+
+/* Outline - Success */
+.btn-outline-success-rounded {
+    border-color: #28a745;
+    color: #28a745;
+}
+
+.btn-outline-success-rounded:hover {
+    background: #28a745;
+    color: #ffffff;
+}
+
+/* Outline - Info */
+.btn-outline-info-rounded {
+    border-color: #17a2b8;
+    color: #17a2b8;
+}
+
+.btn-outline-info-rounded:hover {
+    background: #17a2b8;
+    color: #ffffff;
+}
+
+/* Outline - Warning */
+.btn-outline-warning-rounded {
+    border-color: #ffc107;
+    color: #ffc107;
+}
+
+.btn-outline-warning-rounded:hover {
+    background: #ffc107;
+    color: #1a1a1a;
+}
+
+/* Outline - Danger */
+.btn-outline-danger-rounded {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.btn-outline-danger-rounded:hover {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+/* Outline - Link */
+.btn-outline-link-rounded {
+    border-color: transparent;
+    color: #ff5a00;
+    text-decoration: underline;
+}
+
+.btn-outline-link-rounded:hover {
+    color: #e04e00;
+    background: transparent;
+}
+
+/* Outline - Disable */
+.btn-outline-disable-rounded {
+    border-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-outline-disable-rounded:hover {
+    background: transparent;
+    color: #999;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .btn-sample-rounded,
+    .btn-sample-outline-rounded {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-sample-rounded,
+    .btn-sample-outline-rounded {
+        text-align: center;
+    }
+}
